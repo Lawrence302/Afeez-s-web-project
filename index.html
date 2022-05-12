@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 2021 Frontend Developer Crash Course</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <!-- <script src="https://kit.fontawesome.com/ad3f1f0d37.js"crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+     <nav class="navbar">
+         <div class="container">
+             <div class="logo-div">
+             <a class="logo" href="#">Remember<span>That</span></a>
+             </div>
+
+             <!-- <i class="fa-solid fa-bars mobile-cta"></i> -->
+             <!-- <i  class="fa-solid fa-bars mobile-cta"></i> -->
+             <div class="nav-div">
+                <i id="mobile-exit" class="fa-solid fa-circle-xmark  btn"></i>
+                <ul class="primary-nav">
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">Feature</a></li>
+                    <li><a href="#">Pricing</a></li>
+           
+                    <li><a href="#">Contact</a></li>
+                    <li class="go premium"><a href="#">Go Premium-cta</a></li> 
+                </ul>
+            </div>
+            <!-- the menu bar for toggling the side nav -->
+            <i id="mobile-menu" class="fa-solid fa-bars btn"></i>
+            
+        </nav>
+     </div>
+     <section class="hero">
+          <div class="section1-container">
+              <div class="left-col">
+                  <p class="subhead">It's Nitty &amp; Gritty</p>
+                  <h1>A Task App That Doesn't Stink</h1>
+
+                  <div class="hero-cta">
+                      <a href="#" class="primary-cta">Try for free</a>
+                      <a href="#" class="watch-video-cta">
+                        <i class="fa-solid fa-camera-movie">Watch a video</i>
+                      </a>
+                  </div>
+              </div>
+              <section class="features-section">                
+                    <div class="container">
+                       <ul class="features-list">
+                           <li>Unlimited Task</li>
+                           <li>SMS Task Reminders</li>
+                           <li>Confetti Explosion upon Task Completion</li>
+                           <li>Social Media Announcements</li>
+                           <li>Real Time Collaboration</li>
+                           <li>Other awesome features</li>
+                       </ul>
+
+                       <img src="../image/phone.jpg" alt="phone on the table">
+                   </div>
+              </section>
+          </div>
+
+          <!-- section 2 -->
+     <section class="testimonials-section">
+        <div class="container">
+            <ul>
+                
+                <li>
+                    <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nostrum commodi, modi beatae iste libero nobis non repellendus nam inventore perspiciatis optio odio officiis dolorem temporibus, pariatur veniam quam? Praesentium!</blockquote>
+                    <cite>-Jane Doe</cite>
+             </li>
+             <li>
+                <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nostrum commodi, modi beatae iste libero nobis non repellendus nam inventore perspiciatis optio odio officiis dolorem temporibus, pariatur veniam quam? Praesentium!</blockquote>
+                <cite>-Jane Doe</cite>
+         </li>
+         <li>
+            <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nostrum commodi, modi beatae iste libero nobis non repellendus nam inventore perspiciatis optio odio officiis dolorem temporibus, pariatur veniam quam? Praesentium!</blockquote>
+            <cite>-Jane Doe</cite>
+     </li>
+            </ul>
+        </div>
+     </section>
+
+     <!-- section 3 -->
+       <section class="contact-section">
+           <div class="section3-container">
+               <div class="contact-left">
+                   <h2>Contact</h2>
+ 
+                   <form action="">
+                       <label for="name">Name</label> 
+                       <input type="text" id="name" name="name">
+
+                      
+
+                       <label for="message">Message</label>
+                       <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                       <br>
+
+                       <input type="submit" class="send-message-cta" value="send message">
+                   </form>
+               </div>
+               <div class="contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2852998801204!2d3.3640730999999997!3d6.4855087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8baaf487b453%3A0xbd594e24a4b0c33c!2sHydrodive%20Nigeria%20Limited!5e0!3m2!1sen!2sng!4v1650443036417!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+           </div>
+       </section>
+
+       <script>
+
+        /*below i have written two sections of code to toggle the navbar one is with the ES5 synthax
+        and one is with the ES6 synthax any one you chose to use, will work just uncomment it and use*/
+
+        //    const mobileBtn = document.getElementById('mobile-menu');
+        //    const   nav = document.querySelector('.nav-div');
+        //    const   mobileBtnExit = document.getElementById('mobile-exit');
+
+            // mobileBtn.addEventListener('click', () => {
+            //     nav.classList.remove('hide');
+            // })     
+
+            // mobileBtnExit.addEventListener('click', () => {
+            //     nav.classList.add('hide');
+            // })     
+
+
+
+            ////////////////////////////////////////////////
+            // this is for Es6 synthas if you want to use it
+            const btn = document.querySelectorAll('.btn');
+            const   nav = document.querySelector('.nav-div');
+
+            btn.forEach((b)=>{
+                b.addEventListener("click",()=>{
+                    nav.classList.toggle("hide");
+                })
+            })
+
+
+
+       </script>
+ 
+</body>
+</html>
